@@ -6,8 +6,8 @@ import Services from '@/views/pages/OurServices.vue';
 import Contact from '@/views/pages/Contact.vue';
 import Project from '@/views/pages/Project.vue';
 import Career from '@/views/pages/Career.vue';
-
 import It from '@/views/pages/It.vue';
+
 const routes = [
   {
     path: '/',
