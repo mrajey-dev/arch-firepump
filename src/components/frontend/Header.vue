@@ -23,13 +23,7 @@
     <img src="frontend/img/logo/logo.png" class="logo_arch" alt="Logo" />
     <!-- <h1 class="text-gradient logo-text logo">Arch Enterprises</h1> -->
      
- &nbsp;&nbsp;&nbsp;&nbsp;
-<!-- From Uiverse.io by cbolson --> 
-<label for="filter" class="switch" aria-label="Toggle Filter">
-  <input type="checkbox" id="filter" /> <!-- unchecked = Fire Pump -->
-  <span>Fire Pump</span>
-  <span>IT</span>
-</label>
+
  </a>
   <!-- Desktop Menu -->
  <div class="d-none d-lg-flex align-items-center gap-4 main-nav">
@@ -154,17 +148,7 @@ export default {
     if (token) this.isAuthenticated = true;
   }, 1500);
 
-  // Add toggle listener
-  const filterToggle = document.getElementById("filter");
-  filterToggle.addEventListener("change", () => {
-    // Check if the switch is now "Tech" (checked)
-    if (filterToggle.checked) {
-      this.isFading = true; // show overlay
-      setTimeout(() => {
-        window.location.href = "https://it.archenterprises.co.in";
-      }, 2000); // 2-second fade before redirect
-    }
-  });
+
 },
   methods: {
     goToIT() {

@@ -23,6 +23,11 @@ const routes = [
         name: 'about',
         component: About,
       },
+         {
+        path: 'index',
+        name: 'index',
+        component: Home,
+      },
       {
         path: 'career',
         name: 'career',

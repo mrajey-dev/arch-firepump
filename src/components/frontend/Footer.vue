@@ -1,6 +1,137 @@
 <template>
+  <section class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Fire Pump Supplier in India</h1>
+      <p class="text-muted">
+        <strong>Arch Enterprises</strong> is a trusted and leading fire pump supplier in India,
+        delivering high-performance fire fighting pump systems for industrial,
+        commercial and residential projects across the country.
+      </p>
+    </div>
+
+    <!-- About Row -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <h3 class="fw-semibold mb-3">Complete Fire Pump Solutions</h3>
+        <p>
+          We provide a wide range of fire protection pump systems designed for
+          hydrant networks, sprinkler systems and industrial fire safety
+          applications. Our pumps are engineered for reliability,
+          performance and long service life.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <div class="p-3 border rounded bg-white h-100 shadow-sm">
+              <h6 class="fw-bold">Diesel Fire Pumps</h6>
+              <p class="small text-muted mb-0">Engine driven high-capacity systems for industrial use.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="p-3 border rounded bg-white h-100 shadow-sm">
+              <h6 class="fw-bold">Electric Fire Pumps</h6>
+              <p class="small text-muted mb-0">Efficient motor-driven fire protection solutions.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="p-3 border rounded bg-white h-100 shadow-sm">
+              <h6 class="fw-bold">Jockey Pumps</h6>
+              <p class="small text-muted mb-0">Pressure maintenance pumps for fire systems.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="p-3 border rounded bg-white h-100 shadow-sm">
+              <h6 class="fw-bold">Hydrant & Sprinkler Pumps</h6>
+              <p class="small text-muted mb-0">Complete fire hydrant and sprinkler solutions.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Industries Section -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h3 class="fw-semibold mb-3 text-center">Industries We Serve</h3>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+          <li>✔ Factories & Manufacturing Units</li>
+          <li>✔ Warehouses & Logistics Parks</li>
+          <li>✔ Hospitals & Healthcare Facilities</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+          <li>✔ IT Parks & Commercial Buildings</li>
+          <li>✔ Shopping Malls & Retail Centers</li>
+          <li>✔ High-Rise Residential Towers</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+          <li>✔ Industrial Plants</li>
+          <li>✔ Power Plants</li>
+          <li>✔ Infrastructure Projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Locations -->
+    <div class="text-center mb-4">
+      <h3 class="fw-semibold mb-3">Pan India Service Locations</h3>
+      <p>
+        We supply and install fire pump systems in 
+        <a href="pages/fire-pump-supplier-in-mumbai.html" class="fw-bold text-decoration-none">Mumbai</a>, 
+        <a href="pages/fire-pump-supplier-in-pune.html" class="fw-bold text-decoration-none">Pune</a>, 
+        <a href="pages/fire-pump-supplier-in-hyderabad.html" class="fw-bold text-decoration-none">Hyderabad</a>, 
+        <a href="pages/fire-pump-supplier-in-chennai.html" class="fw-bold text-decoration-none">Chennai</a>, 
+        <a href="pages/fire-pump-supplier-in-bangalore.html" class="fw-bold text-decoration-none">Bangalore</a> 
+        and across India.
+      </p>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="bg-white p-4 rounded shadow-sm">
+      <h3 class="fw-semibold text-center mb-4">Why Choose Arch Enterprises?</h3>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <h6 class="fw-bold">Quality Assured</h6>
+          <p class="small text-muted">Reliable and high-performance fire pump systems.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold">Expert Installation</h6>
+          <p class="small text-muted">Professional testing & commissioning support.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold">AMC Support</h6>
+          <p class="small text-muted">Annual Maintenance Contracts for long-term safety.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold">Pan India Service</h6>
+          <p class="small text-muted">Serving all major cities across India.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   <footer class="footer bg-dark text-white-50 pt-5">
     <div class="container">
+      
       <div class="row g-5">
         <!-- Company Info -->
         <div class="col-md-6 col-lg-3">
