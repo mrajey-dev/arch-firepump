@@ -85,14 +85,12 @@
         <router-link :to="{ name: 'about' }" class="nav-item nav-link nav-hover" @click="closeMenu">About</router-link>
 
         <!-- Mobile Submenu -->
-        <div class="mobile-submenu">
-          <button class="nav-item nav-link nav-hover" @click="toggleSubmenu">
-            Services <span :class="{ 'rotate': isSubmenuOpen }">▼</span>
-          </button>
+        <div class="nav-item nav-link nav-hover">
+                    <router-link :to="{ name: 'diesel-engine-services' }" class="nav-item nav-link" @click="closeMenu">Services</router-link>
+      
           <transition name="fade">
             <div v-if="isSubmenuOpen" class="submenu-items">
-              <router-link :to="{ name: 'diesel-engine-services' }" class="nav-item nav-link" @click="closeMenu">Diesel Engine Services</router-link>
-           <a href="#" class="nav-item nav-link" @click.prevent="goToIT">IT Services</a>
+             
 
             </div>
           </transition>

@@ -49,7 +49,7 @@
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center slideInRight text-center text-lg-start mb-lg-5">
                     <!-- Logo above headline -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Hubbell.svg/2560px-Hubbell.svg.png"
+                    <img src="https://deltaline.shop/wp-content/uploads/2025/08/Metron_Metron-Eledyne_RGB_logo_color.png"
                          alt="Metron Logo"
                          style="max-width: 200px; height: auto; margin-bottom: 20px;">
                     
@@ -58,7 +58,7 @@
                     </h1>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end sparkle-container slider_size" style="padding: 10px; margin-bottom: 40px; position: relative; overflow: hidden;">
-                    <img class="carousel-img" src="frontend/img/clr/metron.webp" alt="Slide 3">
+                    <img class="carousel-img" src="frontend/img/clr/metron1.png" alt="Slide 3">
                 </div>
             </div>
         </div>

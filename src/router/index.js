@@ -67,5 +67,9 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
+router.afterEach((to) => {
+  window.gtag('config', 'G-MPZFJSB6C8', {
+    page_path: to.fullPath
+  })
+});
 export default router;
