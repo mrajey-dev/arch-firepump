@@ -14,7 +14,7 @@
                         <div class="row g-5 pt-5">
                             <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                                 <h1 class="display-4 text-black mb-4 slideInRight headline">
-                                    <strong>Authorised</strong> Master service dealer of Clarke Fire Engines in India
+                                    <strong>Authorised</strong> Master service dealer of Clarke Fire Engines in {{ city }}
                                 </h1>
                             </div>
                             <div class="col-lg-6 align-self-end text-center text-lg-end sparkle-container slider_size" style="font-size:1.5rem; padding: 10px; margin-bottom: 64px; position: relative; overflow: hidden;">
@@ -33,7 +33,7 @@
                                 <img src="https://www.clarkefire.com/images/default-source/default-album/clarke-logo_header_500x77_red.png?sfvrsn=7b362a13_4"
                          alt="Metron Logo"
                          style="max-width: 200px; height: auto; margin-bottom: 20px;">
-                                <h1 class="display-4 text-black mb-4 slideInRight headline">Clarke Fire Pump Engine dealers in India</h1>
+                                <h1 class="display-4 text-black mb-4 slideInRight headline">Clarke Fire Pump Engine dealers in {{ city }}</h1>
                             </div>
                             <div class="col-lg-6 align-self-end text-center text-lg-end sparkle-container slider_size" style="padding: 10px; margin-bottom: 64px; position: relative; overflow: hidden;">
                                 <img class="carousel-img" src="frontend/img/clr/slide3.webp" alt="Slide 2">
@@ -54,7 +54,7 @@
                          style="max-width: 200px; height: auto; margin-bottom: 20px;">
                     
                     <h1 class="display-4 text-black mb-4 slideInRight headline">
-                        Metron Eledyne Fire Pump Controller in India
+                        Metron Eledyne Fire Pump Controller in {{ city }}
                     </h1>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end sparkle-container slider_size" style="padding: 10px; margin-bottom: 40px; position: relative; overflow: hidden;">
@@ -75,7 +75,7 @@
                          alt="Metron Logo"
                          style="max-width: 200px; height: auto; margin-bottom: 20px;">
             
-                                <h1 class="display-4 text-black mb-4 slideInRight headline">Eaton Fire Pump Controller in India</h1>
+                                <h1 class="display-4 text-black mb-4 slideInRight headline">Eaton Fire Pump Controller in {{ city }}</h1>
                             </div>
                             <div class="col-lg-6 align-self-end text-center text-lg-end sparkle-container slider_size" style="padding: 10px; margin-bottom: 64px; position: relative; overflow: hidden;">
                                 <img class="carousel-img" src="frontend/img/clr/eaton.webp" alt="Slide 4">
@@ -93,7 +93,7 @@
                                  <img src="https://www.aebpumps.com/wp-content/uploads/2021/09/tornatech4.png"
                          alt="Metron Logo"
                          style="max-width: 300px; height: auto; margin-bottom: 20px;">
-                                <h1 class="display-4 text-black mb-4 slideInRight headline">Tornatech Fire Pump Controller</h1>
+                                <h1 class="display-4 text-black mb-4 slideInRight headline">Tornatech Fire Pump Controller in {{ city }}</h1>
                             </div>
                             <div class="col-lg-6 align-self-end text-center text-lg-end sparkle-container slider_size" style="padding: 10px; margin-bottom: 64px; position: relative; overflow: hidden;">
                                 <img class="carousel-img" src="frontend/img/clr/tornatech.webp" alt="Slide 5">
@@ -117,7 +117,23 @@
 </template>
 <script>
 export default {
-    name: "SliderSection",
+name: "SliderSection",
+
+computed:{
+city(){
+const city = this.$route.params.city
+
+if(city){
+return city
+.replace(/-/g,' ')
+.replace(/\b\w/g,l=>l.toUpperCase())
+}
+
+return "India"
+}
+
+}
+
 };
 </script>
 

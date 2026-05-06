@@ -40,6 +40,25 @@
 <script>
 export default {
   name: 'App',
+
+  computed: {
+    city() {
+      return this.$route.params.city
+        ? this.$route.params.city.charAt(0).toUpperCase() +
+          this.$route.params.city.slice(1)
+        : "India"
+    }
+  },
+
+  watch: {
+    '$route'(to) {
+      document.title = `Arch Enterprises ${this.city}`
+    }
+  },
+
+  mounted() {
+    document.title = `Arch Enterprises ${this.city}`
+  }
 }
 </script>
 

@@ -17,7 +17,7 @@
         <!-- Content Column -->
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
           <span class="badge bg-black-button text-black px-3 py-2 rounded-pill mb-3">About Us</span>
-          <h1 class="mb-4 text-dark">Clarke Fire Products Dealer in India</h1>
+          <h1 class="mb-4 text-dark">Clarke Fire Products Dealer in {{ city }}</h1>
           <p class="mb-4 text-muted">
             We specialize in delivering high-quality fire pump products and services, ensuring reliability, safety,
             and customer satisfaction. Our commitment to excellence fosters long-term partnerships built on trust and
@@ -51,7 +51,26 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+name: "SliderSection",
 
+computed:{
+city(){
+const city = this.$route.params.city
+
+if(city){
+return city
+.replace(/-/g,' ')
+.replace(/\b\w/g,l=>l.toUpperCase())
+}
+
+return "India"
+}
+}
+
+};
+</script>
 <style scoped>
 /* Image Fade Hover */
 .fade-img-wrapper {

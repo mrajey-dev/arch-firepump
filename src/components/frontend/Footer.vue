@@ -4,9 +4,9 @@
 
     <!-- Section Title -->
     <div class="text-center mb-5">
-      <h1 class="fw-bold">Fire Pump Supplier in India</h1>
+      <h1 class="fw-bold">Fire Pump Supplier in {{ city }}</h1>
       <p class="text-muted">
-        <strong>Arch Enterprises</strong> is a trusted and leading fire pump supplier in India,
+        <strong>Arch Enterprises</strong> is a trusted and leading fire pump supplier in {{ city }},
         delivering high-performance fire fighting pump systems for industrial,
         commercial and residential projects across the country.
       </p>
@@ -94,11 +94,7 @@
       <h3 class="fw-semibold mb-3">Pan India Service Locations</h3>
       <p>
         We supply and install fire pump systems in 
-        <a href="pages/fire-pump-supplier-in-mumbai.html" class="fw-bold text-decoration-none">Mumbai</a>, 
-        <a href="pages/fire-pump-supplier-in-pune.html" class="fw-bold text-decoration-none">Pune</a>, 
-        <a href="pages/fire-pump-supplier-in-hyderabad.html" class="fw-bold text-decoration-none">Hyderabad</a>, 
-        <a href="pages/fire-pump-supplier-in-chennai.html" class="fw-bold text-decoration-none">Chennai</a>, 
-        <a href="pages/fire-pump-supplier-in-bangalore.html" class="fw-bold text-decoration-none">Bangalore</a> 
+        {{ city }}
         and across India.
       </p>
     </div>
@@ -188,19 +184,35 @@
         <div class="col-md-6 text-center text-md-end">
           <div class="footer-menu">
             <a href="index" class="text-white-50 me-3">Home</a>
-            <a href="#" class="text-white-50 me-3">Cookies</a>
-            <a href="contact" class="text-white-50 me-3">Help</a>
-            <a href="faq" class="text-white-50">FAQs</a>
+            <a href="privacy-policy" class="text-white-50 me-3">Privacy Policy</a>
+            <a href="return-policy" class="text-white-50 me-3">Return Policy</a>
+           <a href="refund-policy" class="text-white-50 me-3">Refund Policy</a> 
+           <a href="disclaimer" class="text-white-50 me-3">Disclaimer</a>
+
           </div>
         </div>
       </div>
     </div>
+    <br>
   </footer>
 </template>
 
 <script>
 export default {
   name: "FooterSection",
+computed:{
+city(){
+const city = this.$route.params.city
+
+if(city){
+return city
+.replace(/-/g,' ')
+.replace(/\b\w/g,l=>l.toUpperCase())
+}
+
+return "India"
+}
+  },
 };
 </script>
 

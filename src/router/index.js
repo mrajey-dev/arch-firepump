@@ -7,6 +7,10 @@ import Contact from '@/views/pages/Contact.vue';
 import Project from '@/views/pages/Project.vue';
 import Career from '@/views/pages/Career.vue';
 import It from '@/views/pages/It.vue';
+import PrivacyPolicy from '@/views/pages/PrivacyPolicy.vue';
+import ReturnPolicy from '@/views/pages/ReturnPolicy.vue';
+import RefundPolicy from '@/views/pages/RefundPolicy.vue';
+import Disclaimer from '@/views/pages/Disclaimer.vue';
 
 const routes = [
   {
@@ -59,6 +63,27 @@ const routes = [
         name: 'it-services',
        component: It,
       },
+      {
+        path: 'privacy-policy',
+        name: 'privacy-policy',
+        component: () => import('@/views/pages/PrivacyPolicy.vue'),
+      },
+      {
+        path: 'return-policy',
+        name: 'return-policy',
+        component: () => import('@/views/pages/ReturnPolicy.vue'),
+      },
+      {
+        path: 'refund-policy',
+        name: 'refund-policy',
+        component: () => import('@/views/pages/RefundPolicy.vue'),
+      },
+      {
+        path: 'disclaimer',
+        name: 'disclaimer',
+        component: () => import('@/views/pages/Disclaimer.vue'),
+      },
+
     ],
   },
 ];

@@ -147,7 +147,8 @@ const form = reactive({
 })
 
 const handleSubmit = async () => {
-  loading.value = true;   // Start loader
+  loading.value = true;
+
   try {
     const response = await fetch("https://archenterprises.co.in/contact.php", {
       method: "POST",
@@ -157,14 +158,22 @@ const handleSubmit = async () => {
 
     const data = await response.json();
 
-    if (response.ok) {
+    if (response.ok && data.status === "success") {
+
+      // 🔥 GTM TRACKING (IMPORTANT)
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "form_submit_success"
+      });
+
+      // ✅ SUCCESS POPUP
       Swal.fire({
         title: "Message Sent!",
         text: "Thank you for contacting us.",
         icon: "success",
       });
 
-      // Optional: reset form
+      // ✅ RESET FORM
       form.name = '';
       form.email = '';
       form.phone = '';
@@ -173,12 +182,14 @@ const handleSubmit = async () => {
       form.country_code = '+91';
 
     } else {
-      Swal.fire("Error", data.error || "Failed to submit!", "error");
+      Swal.fire("Error", data.message || "Failed to submit!", "error");
     }
+
   } catch (error) {
     Swal.fire("Error", "Network error!", "error");
   }
-  loading.value = false;   // Stop loader
+
+  loading.value = false;
 };
 </script>
 

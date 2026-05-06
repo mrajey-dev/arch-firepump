@@ -164,7 +164,7 @@
         </div>
         <h4 class="fw-bold mt-3">Our Vision</h4>
         <p class="text-muted">
-         To become the leader in Indian Fire Pump Industry by providing the one stop Fire Pump room services to multinational customers who follow the Global fire and safety standards as per NFPA, FM and UL norms.
+         To become the leader in {{ city }}n Fire Pump Industry by providing the one stop Fire Pump room services to multinational customers who follow the Global fire and safety standards as per NFPA, FM and UL norms.
         </p>
       </div>
     </div>
@@ -354,6 +354,12 @@ export default {
       ],
     };
   },
+  city(){
+if(this.$route.params.city){
+return this.$route.params.city.charAt(0).toUpperCase() + this.$route.params.city.slice(1)
+}
+return "India"
+}
 };
 </script>
 <style scoped>
