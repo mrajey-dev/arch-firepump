@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import MasterLayout from '@/views/pages/MasterLayout.vue';
+import ParticleLogo from '@/views/ParticleLogo.vue';
 import Home from '@/views/Home.vue';
 import About from '@/views/pages/AboutUs.vue';
 import Services from '@/views/pages/OurServices.vue';
@@ -11,10 +12,21 @@ import PrivacyPolicy from '@/views/pages/PrivacyPolicy.vue';
 import ReturnPolicy from '@/views/pages/ReturnPolicy.vue';
 import RefundPolicy from '@/views/pages/RefundPolicy.vue';
 import Disclaimer from '@/views/pages/Disclaimer.vue';
+import logoSrc from '@/assets/logo.png';
 
 const routes = [
   {
     path: '/',
+    name: 'landing',
+    component: ParticleLogo,
+    props: {
+      src: logoSrc,
+      title: 'Arch Enterprises',
+      hint: 'Move your mouse over the logo — particles scatter and reform ✦'
+    }
+  },
+  {
+    path: '/home',
     component: MasterLayout,
     children: [
       {
@@ -22,69 +34,128 @@ const routes = [
         name: 'home',
         component: Home,
       },
+    ]
+  },
+  {
+    path: '/about',
+    component: MasterLayout,
+    children: [
       {
-        path: 'about',
+        path: '',
         name: 'about',
         component: About,
       },
-         {
-        path: 'index',
+    ]
+  },
+  {
+    path: '/index',
+    component: MasterLayout,
+    children: [
+      {
+        path: '',
         name: 'index',
         component: Home,
       },
+    ]
+  },
+  {
+    path: '/career',
+    component: MasterLayout,
+    children: [
       {
-        path: 'career',
+        path: '',
         name: 'career',
         component: Career,
       },
+    ]
+  },
+  {
+    path: '/services',
+    component: MasterLayout,
+    children: [
       {
-        path: 'services',
+        path: '',
         name: 'services',
         component: Services,
       },
+    ]
+  },
+  {
+    path: '/services/it',
+    component: MasterLayout,
+    children: [
       {
-        path: 'contact',
+        path: '',
+        name: 'it-services',
+        component: It,
+      },
+    ]
+  },
+  {
+    path: '/contact',
+    component: MasterLayout,
+    children: [
+      {
+        path: '',
         name: 'contact',
         component: Contact,
       },
+    ]
+  },
+  {
+    path: '/projects',
+    component: MasterLayout,
+    children: [
       {
-        path: 'projects',
+        path: '',
         name: 'projects',
         component: Project,
       },
-      // ✅ Sub-service pages (no leading slash)
+    ]
+  },
+  {
+    path: '/privacy-policy',
+    component: MasterLayout,
+    children: [
       {
-        path: 'services',
-        name: 'diesel-engine-services',
-       component: Services,
-      },
-      {
-        path: 'services/it',
-        name: 'it-services',
-       component: It,
-      },
-      {
-        path: 'privacy-policy',
+        path: '',
         name: 'privacy-policy',
         component: () => import('@/views/pages/PrivacyPolicy.vue'),
       },
+    ]
+  },
+  {
+    path: '/return-policy',
+    component: MasterLayout,
+    children: [
       {
-        path: 'return-policy',
+        path: '',
         name: 'return-policy',
         component: () => import('@/views/pages/ReturnPolicy.vue'),
       },
+    ]
+  },
+  {
+    path: '/refund-policy',
+    component: MasterLayout,
+    children: [
       {
-        path: 'refund-policy',
+        path: '',
         name: 'refund-policy',
         component: () => import('@/views/pages/RefundPolicy.vue'),
       },
+    ]
+  },
+  {
+    path: '/disclaimer',
+    component: MasterLayout,
+    children: [
       {
-        path: 'disclaimer',
+        path: '',
         name: 'disclaimer',
         component: () => import('@/views/pages/Disclaimer.vue'),
       },
-
-    ],
+    ]
   },
 ];
 

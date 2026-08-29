@@ -19,16 +19,14 @@
       <div class="container">
        <nav class="navbar navbar-expand-lg navbar-light p-0 d-flex align-items-center justify-content-between">
   <!-- Logo -->
-  <a href="/" class="navbar-brand d-flex align-items-center gap-2 logo-container">
+  <router-link :to="{ name: 'home' }" class="navbar-brand d-flex align-items-center gap-2 logo-container">
     <img src="frontend/img/logo/logo.png" class="logo_arch" alt="Logo" />
     <!-- <h1 class="text-gradient logo-text logo">Arch Enterprises</h1> -->
-     
-
- </a>
+  </router-link>
   <!-- Desktop Menu -->
  <div class="d-none d-lg-flex align-items-center gap-4 main-nav">
 
-  <router-link to="/" class="nav-item nav-link nav-hover" exact-active-class="active">
+  <router-link :to="{ name: 'home' }" class="nav-item nav-link nav-hover" exact-active-class="active">
     Home
   </router-link>
 
@@ -81,7 +79,7 @@
   <transition name="slide-fade">
     <div v-if="isMenuOpen" class="mobile-menu-overlay">
       <div class="mobile-menu-container text-center">
-        <router-link to="/" class="nav-item nav-link nav-hover" @click="closeMenu">Home</router-link>
+        <router-link :to="{ name: 'home' }" class="nav-item nav-link nav-hover" @click="closeMenu">Home</router-link>
         <router-link :to="{ name: 'about' }" class="nav-item nav-link nav-hover" @click="closeMenu">About</router-link>
 
         <!-- Mobile Submenu -->
